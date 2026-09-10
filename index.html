@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .boxMaker {
-            height: 60vh;
-            width: 100vw;
+        .square {
+            height: 100px;
+            width: 100px;
             border: 2px solid red;
-            margin: 10px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .box {
-            margin: 5px;
-            height: 50px;
-            width: 50px;
-            border: 1px solid black;
+            margin: 20px;
         }
     </style>
 </head>
 <body>
     <input type="text">
     <button> Add </button>
-    <div class="boxMaker"> </div>
-
-    <script>
-        const inputTag = document.querySelector("input");
-        const buttonTag = document.querySelector("button");
-        const boxMaker = document.querySelector(".boxMaker");
-        console.dir(document);
-        console.dir(inputTag);
-        console.dir(buttonTag);
-        console.dir(boxMaker);
-
-        buttonTag.addEventListener('click',function () {
-            let n = Number(inputTag.value);
-            for(let i = 1;i<=n;i++){
-                let box = document.createElement("div");
-                box.classList.add("box");
-                boxMaker.appendChild(box);
-            }
-        })
-
-    </script>
+    <div class="boxContainer">
+        <div class="square"></div>
+    </div>
 </body>
+<script>
+    const inputtag = document.querySelector("input");
+    const buttontag = document.querySelector("button");
+
+    // console.dir(inputtag);
+    // console.dir(buttontag);
+
+    buttontag.addEventListener("click" , function() {
+        console.log("Button clicked");
+    })
+</script>
+
 </html>
