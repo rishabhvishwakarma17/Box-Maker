@@ -14,22 +14,30 @@
         }
     </style>
 </head>
+
 <body>
     <input type="text">
     <button> Add </button>
     <div class="boxContainer">
-        <div class="square"></div>
+        <!-- <div class="square"></div> -->
     </div>
 </body>
 <script>
     const inputtag = document.querySelector("input");
     const buttontag = document.querySelector("button");
+    const container = document.querySelector(".boxContainer")
 
     // console.dir(inputtag);
     // console.dir(buttontag);
-
-    buttontag.addEventListener("click" , function() {
-        console.log("Button clicked");
+    // console.dir(document);
+    buttontag.addEventListener("click", function () {
+        const numberOfBoxes = Number(inputtag.value);
+        // console.log(numberOfBoxes);
+        for (let i = 1; i <= numberOfBoxes; i++) {
+            const boxEle = document.createElement("div");
+            boxEle.classList.add("square");
+            container.appendChild(boxEle);
+        }
     })
 </script>
 
